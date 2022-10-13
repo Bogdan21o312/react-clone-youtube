@@ -1,10 +1,12 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
 import userReducer from './reducers/UserSlice'
 import {videoAPI} from "../sevices/VideoService";
+import {categoriesAPI} from "../sevices/CategoriesService";
 
 const rootReducer = combineReducers({
     userReducer,
-    [videoAPI.reducerPath]: videoAPI.reducer
+    [videoAPI.reducerPath]: videoAPI.reducer,
+    [categoriesAPI.reducerPath]: categoriesAPI.reducer,
 })
 
 export const setupStore = () => {
