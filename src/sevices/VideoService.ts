@@ -1,39 +1,39 @@
 import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/dist/query/react";
-import {ICategories} from "../models/IVideo";
+import {IVideo} from "../models/IVideo";
 
 export const videoAPI = createApi({
     reducerPath: 'videoAPI',
     baseQuery: fetchBaseQuery({baseUrl: 'http://localhost:3000'}),
     tagTypes: ['Video'],
     endpoints: (build) => ({
-        fetchAllPosts: build.query<ICategories[], number>({
+        fetchAllPosts: build.query<IVideo[], number>({
             query: (limit: number = 5) => ({
-                url: '/categories',
+                url: '/videos',
                 params: {
                     _limit: limit
                 }
             }),
             providesTags: result => ['Video']
         }),
-        createPost: build.mutation<ICategories, ICategories>({
+        createPost: build.mutation<IVideo, IVideo>({
             query: (post) => ({
-                url: '/categories',
+                url: '/videos',
                 method: 'POST',
                 body: post
             }),
             invalidatesTags: ['Video']
         }),
-        updatePost: build.mutation<ICategories, ICategories>({
+        updatePost: build.mutation<IVideo, IVideo>({
             query: (post) => ({
-                url: `/categories/${post.id}`,
+                url: `/videos/${post.id}`,
                 method: 'PUT',
                 body: post
             }),
             invalidatesTags: ['Video']
         }),
-        deletePost: build.mutation<ICategories, ICategories>({
+        deletePost: build.mutation<IVideo, IVideo>({
             query: (post) => ({
-                url: `/categories/${post.id}`,
+                url: `/videos/${post.id}`,
                 method: 'DELETE',
                 body: post
             }),
