@@ -1,0 +1,35 @@
+@import "src/assets/style/Style.module";
+
+.categoryContainer{
+  background-color: var(--secondary-color);
+  display: flex;
+  padding: rem(12) rem(20);
+  overflow-x: scroll;
+  position: relative;
+  --webkit-overflow-scrolling: touch;
+}
+
+.categoryContainer::-webkit-scrollbar{
+  display: none;
+}
+
+.categoryTab{
+  font-weight: 400;
+  font-size: rem(14);
+  padding: rem(6) rem(14);
+  border-radius: rem(15);
+  margin-right: rem(12);
+  word-break: keep-all;
+  white-space: nowrap;
+  background-color: var(--secondary-light-color);
+  cursor: pointer;
+}
+
+.categoryTab:hover{
+  background-color: var(--hover-text-color);
+}
+
+.categoryTab.active{
+  background-color: var(--text-main);
+  color: var(--primary-color);
+}

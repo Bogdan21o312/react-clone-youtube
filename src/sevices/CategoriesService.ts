@@ -8,7 +8,7 @@ export const categoriesAPI = createApi({
     endpoints: (build) => ({
         fetchAllPosts: build.query<ICategories[], number>({
             query: (limit: number = 5) => ({
-                url: '/videos',
+                url: '/categories',
                 params: {
                     _limit: limit
                 }
@@ -17,7 +17,7 @@ export const categoriesAPI = createApi({
         }),
         createPost: build.mutation<ICategories, ICategories>({
             query: (post) => ({
-                url: '/videos',
+                url: '/categories',
                 method: 'POST',
                 body: post
             }),
@@ -25,7 +25,7 @@ export const categoriesAPI = createApi({
         }),
         updatePost: build.mutation<ICategories, ICategories>({
             query: (post) => ({
-                url: `/videos/${post.id}`,
+                url: `/categories/${post.id}`,
                 method: 'PUT',
                 body: post
             }),
@@ -33,7 +33,7 @@ export const categoriesAPI = createApi({
         }),
         deletePost: build.mutation<ICategories, ICategories>({
             query: (post) => ({
-                url: `/videos/${post.id}`,
+                url: `/categories/${post.id}`,
                 method: 'DELETE',
                 body: post
             }),
