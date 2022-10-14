@@ -46,24 +46,50 @@
   "profile": {
     "name": "typicode"
   },
-  "categories": {
-    "title": [
-      "All",
-      "Gaming",
-      "Javascript",
-      "Python",
-      "Music",
-      "Mixes",
-      "Lives",
-      "Comedy",
-      "Programming",
-      "Lofi Songs",
-      "Couples",
-      "Teenage Programmer",
-      "Arijit Singh",
-      "T-Series"
-    ]
-  },
+  "categories": [
+    {
+      "title": "All"
+    },
+    {
+      "title": "Gaming"
+    },
+    {
+      "title": "Javascript"
+    },
+    {
+      "title": "Python"
+    },
+    {
+      "title": "Music"
+    },
+    {
+      "title": "Mixes"
+    },
+    {
+      "title": "Lives"
+    },
+    {
+      "title": "Comedy"
+    },
+    {
+      "title": "Programming"
+    },
+    {
+      "title": "Lofi Songs"
+    },
+    {
+      "title": "Couples"
+    },
+    {
+      "title": "Teenage Programmer"
+    },
+    {
+      "title": "Arijit Singh"
+    },
+    {
+      "title": "T-Series"
+    }
+  ],
   "videos": [
     {
       "image": "https://i.ytimg.com/vi/rsHq4NPDEs0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACqnEFGM3xyB_QWFF-wKyUXsgV5g",
