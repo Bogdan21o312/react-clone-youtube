@@ -1,0 +1,84 @@
+@import "src/assets/style/Style.module";
+
+
+.video {
+  &Container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: rem(10);
+    @include adaptiveValue("column-gap", 20, 10);
+  }
+
+  &Box {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    max-width: rem(360);
+  }
+
+  &Thumbnail {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &Info {
+    display: flex;
+    margin-top: rem(10);
+
+    &Box {
+      margin-left: rem(8);
+
+      &Title {
+        font-weight: 400;
+        margin: 0;
+        font-size: rem(15);
+        line-height: rem(20);
+      }
+
+      &SubTitle {
+        font-weight: 400;
+        color: var(--text-light-main);
+        font-size: rem(13);
+        margin: rem(8) 0 rem(4) 0;
+        align-items: center;
+        @media (any-hover: hover) {
+          &:hover {
+            color: var(--text-main);
+          }
+        }
+        span {
+          font-size: rem(12);
+          color: var(--text-light-main);
+        }
+      }
+      &Text {
+        font-size: rem(12);
+        color: var(--text-light-main);
+        margin: 0;
+      }
+    }
+  }
+  &Channel {
+    width: rem(34);
+    height: rem(34);
+    border-radius: 50%;
+  }
+}
+
+.thumbnailInfo {
+  position: relative;
+  width: 100%;
+}
+
+.thumbnailInfo p {
+  position: absolute;
+  bottom: rem(6);
+  right: rem(3);
+  font-size: rem(12);
+  padding: rem(2) rem(6);
+  background-color: #000000dc;
+  margin: 0;
+  font-weight: 500;
+  border-radius: rem(3);
+}

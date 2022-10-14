@@ -3,6 +3,7 @@ export interface IVideo {
     logo: string,
     title: string,
     text: string,
+    image: string,
     channel: string,
     isVerified: boolean,
     category: string,
