@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {videoAPI} from "../../sevices/VideoService";
+import {videoAPI} from "../../sevices/VideoServices";
 import classes from "./Video.module.scss"
 
 const Index = () => {

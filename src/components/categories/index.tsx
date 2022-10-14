@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import {videoAPI} from "../../sevices/VideoService";
-import {categoriesAPI} from "../../sevices/CategoriesService";
+import {videoAPI} from "../../sevices/VideoServices";
+import {categoriesAPI} from "../../sevices/CategoriesServices";
 import classes from "./Categories.module.scss"
 
 const Index = () => {
