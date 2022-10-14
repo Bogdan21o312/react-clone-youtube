@@ -1,5 +1,21 @@
 //LightTheme====================================================================================================
-
+:root {
+  --primary-color: #181818;
+  --secondary-color: #212121;
+  --secondary-light-color: #383838;
+  --main-secondary-light: #717171;
+  --text-light-main: #aaaaaa;
+  --hover-text-color: #4d4d4d;
+  --text-main: #fff;
+}
 //DarkTheme====================================================================================================
-
+.dark-theme {
+  --primary-color: #f9f9f9;
+  --secondary-color: #ffff;
+  --secondary-light-color: #e5e5e5;
+  --main-secondary-light: #e5e5e5;
+  --hover-text-color: #dbdbdb;
+  --text-main: #000000;
+  --text-light-main: #4d4d4d;
+}
 //Other====================================================================================================
