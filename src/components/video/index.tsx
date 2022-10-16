@@ -1,10 +1,15 @@
-import React, {useState} from 'react';
+import React, {FC, useState} from 'react';
 import {videoAPI} from "../../sevices/VideoServices";
 import classes from "./Video.module.scss"
+import {IVideo} from "../../models/IVideo";
 
-const Index = () => {
-    const [limit, setLimit] = useState(100)
-    const {data: videos, error, isLoading} = videoAPI.useFetchAllPostsQuery(limit)
+interface VideoProps {
+    videos: IVideo,
+}
+
+const Index: FC<VideoProps> = ({videos}) => {
+    // const [limit, setLimit] = useState(100)
+    // const {data: videos, error, isLoading} = videoAPI.useFetchAllPostsQuery(limit)
     const countViews = (number: number) => {
         if (number.toString().length === 4) {
             return number.toString().slice(0, 1) + 'K'
@@ -24,8 +29,7 @@ const Index = () => {
     }
     return (
         <div className={classes.videoContainer}>
-            {videos && videos.map((videos, index) =>
-                <div key={index} className={classes.videoBox}>
+                <div className={classes.videoBox}>
                     <div className={classes.thumbnailInfo}>
                         <img src={videos.image} alt="Thumbnail" className={classes.videoThumbnail}/>
                         <p>{videos.duration}</p>
@@ -40,7 +44,6 @@ const Index = () => {
                         </div>
                     </div>
                 </div>
-            )}
         </div>
     );
 };
