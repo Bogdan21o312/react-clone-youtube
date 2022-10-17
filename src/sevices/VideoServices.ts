@@ -3,7 +3,7 @@ import {IVideo} from "../models/IVideo";
 
 export const videoAPI = createApi({
     reducerPath: 'videoAPI',
-    baseQuery: fetchBaseQuery({baseUrl: 'http://localhost:3000'}),
+    baseQuery: fetchBaseQuery({baseUrl: 'http://localhost:8492'}),
     tagTypes: ['Video'],
     endpoints: (build) => ({
         fetchAllPosts: build.query<IVideo[], number>({

@@ -3,7 +3,7 @@ import {ITabs} from "../models/ITabs";
 
 export const settingsAPI = createApi({
     reducerPath: 'settingsAPI',
-    baseQuery: fetchBaseQuery({baseUrl: 'http://localhost:3000'}),
+    baseQuery: fetchBaseQuery({baseUrl: 'http://localhost:8492'}),
     tagTypes: ['Settings'],
     endpoints: (build) => ({
         fetchAllPosts: build.query<ITabs[], number>({

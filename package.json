@@ -13,6 +13,7 @@
     "@types/react-dom": "^18.0.6",
     "@types/react-redux": "^7.1.24",
     "axios": "^1.1.2",
+    "concurrently": "^7.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.4",
@@ -23,9 +24,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "dev": "concurrently \"npm run server\" \"npm start\"",
+    "start": "PORT=3789 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "server": "json-server -w db.json -p 8492",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

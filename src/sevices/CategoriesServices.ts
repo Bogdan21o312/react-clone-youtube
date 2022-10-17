@@ -3,7 +3,7 @@ import {ICategories} from "../models/ICategories";
 
 export const categoriesAPI = createApi({
     reducerPath: 'categoriesAPI',
-    baseQuery: fetchBaseQuery({baseUrl: 'http://localhost:3000'}),
+    baseQuery: fetchBaseQuery({baseUrl: 'http://localhost:8492'}),
     tagTypes: ['Categories'],
     endpoints: (build) => ({
         fetchAllPosts: build.query<ICategories[], number>({

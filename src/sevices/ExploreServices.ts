@@ -3,7 +3,7 @@ import {ITabs} from "../models/ITabs";
 
 export const exploreAPI = createApi({
     reducerPath: 'exploreAPI',
-    baseQuery: fetchBaseQuery({baseUrl: 'http://localhost:3000'}),
+    baseQuery: fetchBaseQuery({baseUrl: 'http://localhost:8492'}),
     tagTypes: ['Explore'],
     endpoints: (build) => ({
         fetchAllPosts: build.query<ITabs[], number>({

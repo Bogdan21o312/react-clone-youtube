@@ -3,7 +3,7 @@ import {IChannels} from "../models/IChannels";
 
 export const channelsAPI = createApi({
     reducerPath: 'channelsTabsAPI',
-    baseQuery: fetchBaseQuery({baseUrl: 'http://localhost:3000'}),
+    baseQuery: fetchBaseQuery({baseUrl: 'http://localhost:8492'}),
     tagTypes: ['Channels'],
     endpoints: (build) => ({
         fetchAllPosts: build.query<IChannels[], number>({
